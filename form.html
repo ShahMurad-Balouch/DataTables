@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="test">
+
+    </div>
+<!-- <table>
+    <thead>
+        <th>name</th>
+    </thead>
+    <tbody id="tbody">
+        <tr></tr>
+    </tbody>
+
+    <tr>
+        <th></th>
+    </tr>
+</table> -->
+
+<script>
+    const url = "https://jsonplaceholder.typicode.com/users";
+    const options = {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-key': 'e2d6393648msh3522a3a3ed46d4bp1319afjsnb085eb4dcb08',
+            'x-rapidapi-host': 'twitter154.p.rapidapi.com'
+        }
+    };
+
+    fetch(url, options)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);;
+            // let tab = 
+            document.getElementsByClass("test").innerText=data;
+            
+        })
+        .catch((error) => console.log(error));
+</script>
+</body>
+</html>
